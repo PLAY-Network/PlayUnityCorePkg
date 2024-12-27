@@ -22,9 +22,9 @@ namespace RGN
             APPLICATION_STORE_FILE_NAME_WITH_EXTENSION;
 
         // Email WebForm sign in URL
-        public const string DEVELOPMENT_EMAIL_SIGN_IN_URL = "https://development-oauth.ready.gg/?url_redirect=";
-        public const string STAGING_EMAIL_SIGN_IN_URL = "https://staging-oauth.ready.gg/?url_redirect=";
-        public const string PRODUCTION_EMAIL_SIGN_IN_URL = "https://oauth.ready.gg/?url_redirect=";
+        public const string DEVELOPMENT_EMAIL_SIGN_IN_URL = "https://development-oauth.myplay.network/?url_redirect=";
+        public const string STAGING_EMAIL_SIGN_IN_URL = "https://staging-oauth.myplay.network/?url_redirect=";
+        public const string PRODUCTION_EMAIL_SIGN_IN_URL = "https://oauth.myplay.network/?url_redirect=";
 
         // Device flow WebForm URL
         public const string DEVELOPMENT_DEVICE_FLOW_SIGN_IN_URL = "https://dev-device-oauth.myplay.network";
