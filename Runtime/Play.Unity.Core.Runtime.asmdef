@@ -1,12 +1,11 @@
 {
-    "name": "GetReady.RGN.Core.Editor",
+    "name": "Play.Unity.Core.Runtime",
     "rootNamespace": "",
     "references": [
-        "GUID:cf87a66721c783241b810ce809921a27"
+        "Unity.TextMeshPro",
+        "GetReady.Developer.Runtime"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

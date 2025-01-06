@@ -8,7 +8,7 @@ namespace RGN.MyEditor
 {
     public class BuildPreProcessor : IPreprocessBuildWithReport
     {
-        private const string PackagesFolderPath = "Packages/io.getready.rgn.core";
+        private const string PackagesFolderPath = "Packages/io.play.unity.core";
         private const string DestinationLinkPath = "Assets/ReadyGamesNetwork";
         private const string LinkFile = "link.xml";
 
