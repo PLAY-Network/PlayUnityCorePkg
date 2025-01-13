@@ -28,7 +28,7 @@ namespace RGN.MyEditor
                 writer.Flush();
             }
 
-            AssetDatabase.CopyAsset("Packages/io.play.unity.core/Plugins/Windows/RGNDeepLinkReflector.exe",
+            AssetDatabase.CopyAsset("Packages/network.theplay.unity.core/Plugins/Windows/RGNDeepLinkReflector.exe",
                 Path.Combine(Path.GetDirectoryName(pathToBuiltProject)!, $"{Application.productName}DL.exe"));
         }
     }

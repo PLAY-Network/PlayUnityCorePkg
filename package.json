@@ -1,5 +1,5 @@
 ﻿{
-  "name": "io.play.unity.core",
+  "name": "network.theplay.unity.core",
   "displayName": "PLAY SDK. Core",
   "version": "0.16.0",
   "unity": "2020.3",
