@@ -8,7 +8,7 @@ namespace RGN.MyEditor
     [InitializeOnLoad]
     public class CredentialsSetup
     {
-        private const string READY_MENU = "ReadyGG/";
+        private const string READY_MENU = "PlaySDK/";
 
         private const string CREDENTIALS = READY_MENU + "Credentials";
         private const string OPEN_DEVELOPERS_DASHBOARD = READY_MENU + "Open Developers Dashboard";
