@@ -56,6 +56,8 @@ namespace RGN.Impl.Firebase.Core.Auth
 
         public IUser SetUserTokens(string idToken, string refreshToken)
         {
+            IUser prevUser = CurrentUser;
+            
             if (!string.IsNullOrEmpty(idToken) && !string.IsNullOrEmpty(refreshToken))
             {
                 CurrentUser = JwtDecoder.IsValid(idToken) ? new User(this, _json, idToken, refreshToken) : null;
@@ -63,6 +65,12 @@ namespace RGN.Impl.Firebase.Core.Auth
             else
             {
                 CurrentUser = null;
+            }
+            
+            if (prevUser == CurrentUser || (prevUser?.IdToken == CurrentUser?.IdToken &&
+                                            prevUser?.RefreshToken == CurrentUser?.RefreshToken))
+            {
+                return CurrentUser;
             }
             
             SaveUserTokens();
