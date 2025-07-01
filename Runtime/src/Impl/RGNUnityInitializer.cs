@@ -48,7 +48,7 @@ namespace RGN.Impl.Firebase
                 yield break;
             }
             Debug.Log("Automatically logging in as a guest");
-            RGNCoreBuilder.I.Dependencies.RGNGuestSignIn.TryToSignInAsync();
+            RGNCoreBuilder.I.Dependencies.RGNGuestSignIn.TryToSignIn();
         }
     }
 }
