@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
+using RGN.Impl.Firebase.Network;
 
 namespace RGN.Impl.Network.DotNetNetwork
 {
@@ -46,8 +47,12 @@ namespace RGN.Impl.Network.DotNetNetwork
         
         private BaseDotNetHttpClientFactory() { }
         
-        private HttpClient GetNewHttpClient() =>
-            new HttpClient(GetHandler(), disposeHandler: false);
+        private HttpClient GetNewHttpClient()
+        {
+            HttpClient httpClient = new HttpClient(GetHandler(), disposeHandler: false);
+            httpClient.Timeout = System.TimeSpan.FromSeconds(HttpClientFactory.DEFAULT_TIMEOUT_IN_SECONDS);
+            return httpClient;
+        }
 
         private HttpClientHandler GetHandler()
         {

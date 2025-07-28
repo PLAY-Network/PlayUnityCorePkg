@@ -16,6 +16,8 @@ namespace RGN.Impl.Firebase.Network
             new DotNetHttpClientFactory();
 #endif
         
+        public const float DEFAULT_TIMEOUT_IN_SECONDS = 60f;
+        
         public static IHttpClient Get(string name) =>
             sImplHttpClientFactory.Get(name);
 

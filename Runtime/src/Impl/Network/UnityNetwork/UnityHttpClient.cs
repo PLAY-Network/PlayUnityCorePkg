@@ -3,6 +3,7 @@ using UnityEngine.Networking;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using RGN.Impl.Firebase.Network;
 
 namespace RGN.Impl.Network.UnityNetwork
 {
@@ -11,6 +12,7 @@ namespace RGN.Impl.Network.UnityNetwork
         public async Task<IHttpResponse> SendAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
             using UnityWebRequest unityRequest = new UnityWebRequest(requestMessage.RequestUri, requestMessage.Method.ToString().ToUpper());
+            unityRequest.timeout = (int)HttpClientFactory.DEFAULT_TIMEOUT_IN_SECONDS;
 
             if (requestMessage.Method == HttpMethod.Post ||
                 requestMessage.Method == HttpMethod.Put ||
